@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="favoritt.css">
+</head>
+<body>
+<script src="favoritt.js"></script>
+
+<style>
+ #map {
+  height: 400px;
+  width: 100%;
+ }
+</style>
+
+<title> Shoppingguide for Bergen | Favorite playground </title>
+<link rel="stylesheet" type="text/css" href="favoritt.css">
+</head>
+
+<body>
+<!-- Toppmeny og headerbilde -->
+<header>
+<div class="header">
+  <div id="branding">
+    <h1>Favorite playground in Bergen</h1>
+</div>
+<nav>
+<ul>
+  <li><a href="index_flexbox.html">Home</a></li>
+  <li><a href="kart.html">Map</a></li>
+  <li><a href="toalettmap_side.html">Restrooms</a></li>
+  <li><a href="lekeplasser.html">Playgrounds</a></li>
+  <li><a href="favoritt.html">Favorite playground</a></li>
+  <li><a href="parkering.html">Parking</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div id="headerbilde">
+<img id="image" src="./img/x.jpg" alt="Picture of Bergen">
+</div>
+
+<section>
+<h2 id="tekst">Velg din favorittlekeplass<h2>
+</section>
+
+
+<h4 id="overskrift2">Her får du opp både din favorittlekeplass, og den nærmeste lekeplassen i luftavstand.</h4>
+
+<select id="choose-playground" onchange="setFavourite()">
+  <option value="0">Velg din favorittlekeplass</option>
+</select>
+
+<div id="container"></div>
+
+<style>
+
+.BUTTON {
+  text-align:center;
+}
+
+#option{
+  text-align:center;
+}
+
+#overskrift2{
+  font-family: Helvetica;
+  font-style: normal;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+
+  padding: 30px;
+  width: 70%;
+}
+
+#choose-playground {
+  display: flex;
+  justify-content: center;
+text-align:center;
+}
+
+  #container div {
+    width: 400px;
+    border: 30px solid white;
+    height: 200px;
+    background-color: #f3e7e7;
+    text-align: center;
+    font-family: didot-bold;
+
+  }
+
+
+
+</style>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").options.length;
+    document.getElementById("demo").innerHTML = "Found " + x + " options in the list.";
+}
+</script>
+
+
+<div class="container-3">
+  <img src="./img/icon.png">
+    <p>Bergen Shoppingguide, Copyright &copy; 2018</p>
+</div>
+
+  </body>
+</html>

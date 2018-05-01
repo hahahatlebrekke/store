@@ -1,0 +1,104 @@
+body{
+  font-family: Arial, Helvetica, sans-sans-serif;
+  font-size:15px;
+  line-height:1,5;
+  padding:0;
+  margin:0;
+  background-color: white;
+}
+
+/* Global */
+.container{
+  width:100%;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+/* Header **/
+header{
+  background:#f6f6f6;
+  color: #black;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#f9efef 5px solid;
+  font-family: didot-bold;
+}
+
+header a{
+  color: #7c7878;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+  font-family: code-bold;
+}
+
+header ul{
+  margin:0;
+  padding:0;
+  width: 100%;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+  padding-left: 70px;
+  padding-right: 50px;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+  padding-right: 70px;
+}
+
+
+#image{
+  width: 100%;
+}
+
+#tekst{
+  color: black;
+  background-color: #f6f6f6;
+  font-family: code-bold;
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.container-3{
+  padding:20px;
+  margin-top:20px;
+  color: #7c7878;
+  background-color:#f3e7e7;
+  text-align: center;
+}
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+background-color: #3e8e41;
+}
+.input {
+    background-color: white;
+    border: 2px solid #7c7878;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}

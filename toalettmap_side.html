@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="toalettListe-1.js"></script>
+  <script src="avansert-søk.js"></script>
+  <script src="avstand.js"></script>
+  <style>
+    #Map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+
+  <title> Shoppingguide for Bergen | Bathrooms </title>
+  <link rel="stylesheet" type="text/css" href="toalettmap.css">
+</head>
+
+<body>
+  <!-- Toppmeny og headerbilde -->
+  <header>
+    <div class="header">
+      <div id="branding">
+        <h1>Restrooms in Bergen</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index_flexbox.html">Home</a></li>
+          <li><a href="kart.html">Map</a></li>
+          <li><a href="toalettmap_side.html">Restrooms</a></li>
+          <li><a href="lekeplasser.html">Playgrounds</a></li>
+          <li><a href="favoritt.html">Favorite playground</a></li>
+          <li><a href="parkering.html">Parking</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="headerbilde">
+    <img id="image" src="./img/bad.jpg" alt="Bathroom">
+  </div>
+
+  <section>
+    <h2 id="tekst">Where to use the restroom<h2>
+  </section>
+
+            <fieldset>
+              <input type="text" id="myInput" placeholder="Search for toilets.." >
+             <button onclick= "hurtigSok()">Finn toalettet</button>
+            <button class="collapsible"onclick="myFunction()">Åpne avansert søk</button>
+
+            <div class="content">
+          <form  method="POST" enctype="multipart/form-data">
+            <br><div id="advanced_search"></br>
+              <input type="checkbox" id="rullestolTilgang">Rullestol<br>
+              <input type="checkbox" id="stelleromTilgang">Stellerom<br>
+              <input type="checkbox" id="free">Gratis<br>
+              <input type="checkbox" id="open_now">Åpen Nå<br>
+
+            <br><label for="kjønn"> Kjønn:</label></br>
+              <input id="kjønn" name="kjønn" type="text" list="gender">
+                <datalist id="gender"onchange="getKjønnValue();">
+                  <select >
+                      <option value="Dame"></option>
+                      <option value="Herre"></option>
+                  </select>
+                </datalist>
+
+              <br><label for="maksPris"> Maks pris:</label></br>
+                <input id="maksPris" name="maksPris" type="number" min="0" max="12" value="0" required>
+
+              <br><label for="Klokkeslett">Klokkeslett:</label></br>
+                <input id="Klokkeslett" type="time" name="time">
+
+              <br><label for="Dag"> Dato: </label></br>
+                <input id="Dag" type="date" name="day">
+              <br></br>
+                <input type="button" onclick="avansert_sok()" value="Finn toalettet med avansert søk" >
+              </div>
+            </form>
+          </div>
+            <ol id="toalettene">
+            </ol>
+        </form>
+      <div id="Map"></div>
+      <script defer async
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNktKQEbOb6d_XW5CDYCMaDPuYlDWLfDQ&callback=initMap">
+      </script>
+
+  <!--Footer-->
+    <div class="container-3">
+      <img src="./img/icon.png">
+        <p>Bergen Shoppingguide, Copyright &copy; 2018</p>
+    </div>
+    </body>
+  </html>
+  <!--lage en dag input så da kan jeg finne det. tid.sondag, tid_hverdag-->
